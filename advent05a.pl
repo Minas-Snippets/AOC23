@@ -17,8 +17,8 @@ while(<>) {
 }
 
 @s = map{ma($_)} @s;
-my $min = -1;
-$min = $min < 0 || $_ < $min ? $_ : $min for @s;
+my $min = shift(@s);
+$min = $_ < $min ? $_ : $min for @s;
 
 print $min;
 
