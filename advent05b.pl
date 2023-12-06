@@ -21,8 +21,8 @@ while(<>) {
 
 @s = map{ ma(@$_) } @s;
 
-my $min = -1;
-$min = $min < 0 || $_->[0] < $min ? $_->[0] : $min for @s;
+my $min = $s[0]->[0];
+$min = $_->[0] < $min ? $_->[0] : $min for @s;
 
 print $min;
 
